@@ -1,5 +1,6 @@
 import 'package:e_comm/core/constants/my_assets.dart';
 import 'package:e_comm/core/constants/my_colors.dart';
+import 'package:e_comm/presentation/screens/auth/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -25,13 +26,14 @@ class _IndexState extends State<Index> {
             padding: const EdgeInsets.symmetric(horizontal: 24),
             child: Column(
               children: [
+                31.h.heightBox,
                 Image.asset(
                   MyAssets.mainLogo,
                   color: MyColors.primaryColor,
                   height: 42.h,
                   width: 139.w,
                 ),
-                61.h.heightBox,
+                31.h.heightBox,
                 PageView(
                   controller: indexModel.pageController,
                   children: [
@@ -85,7 +87,12 @@ class _IndexState extends State<Index> {
                 ).expand(),
                 61.h.heightBox,
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Auth()),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: MyColors.primaryColor,
                     minimumSize: Size(MediaQuery.of(context).size.width, 44.h),
