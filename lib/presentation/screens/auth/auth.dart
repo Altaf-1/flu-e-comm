@@ -1,5 +1,8 @@
 import 'package:e_comm/core/constants/my_assets.dart';
-import 'package:e_comm/core/constants/my_colors.dart';
+import 'package:e_comm/presentation/screens/auth/login.dart';
+import 'package:e_comm/presentation/screens/auth/register.dart';
+import 'package:e_comm/presentation/widgets/primary_Button.dart';
+import 'package:e_comm/presentation/widgets/secondary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -43,47 +46,24 @@ class _AuthState extends State<Auth> {
                     .color(Colors.white)
                     .make(),
                 21.h.heightBox,
-                ElevatedButton(
+                PrimaryCommonButton(
+                  buttonName: "Login",
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Auth()),
+                      MaterialPageRoute(builder: (context) => const Login()),
                     );
                   },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: MyColors.primaryColor,
-                    minimumSize: Size(MediaQuery.of(context).size.width, 44.h),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(11.r),
-                    ),
-                  ),
-                  child: "Login"
-                      .text
-                      .size(16.sp)
-                      .fontWeight(FontWeight.w700)
-                      .color(Colors.white)
-                      .make(),
                 ),
                 12.h.heightBox,
-                OutlinedButton(
+                SecondaryButton(
+                  buttonName: "Register",
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Auth()),
+                      MaterialPageRoute(builder: (context) => const Register()),
                     );
                   },
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: Size(MediaQuery.of(context).size.width, 44.h),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(11.r),
-                    ),
-                  ),
-                  child: "Register"
-                      .text
-                      .size(16.sp)
-                      .fontWeight(FontWeight.w700)
-                      .color(Colors.white)
-                      .make(),
                 ),
                 21.h.heightBox,
               ],

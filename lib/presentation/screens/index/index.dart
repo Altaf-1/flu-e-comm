@@ -1,6 +1,7 @@
 import 'package:e_comm/core/constants/my_assets.dart';
 import 'package:e_comm/core/constants/my_colors.dart';
 import 'package:e_comm/presentation/screens/auth/auth.dart';
+import 'package:e_comm/presentation/widgets/primary_Button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -86,27 +87,13 @@ class _IndexState extends State<Index> {
                   ],
                 ).expand(),
                 61.h.heightBox,
-                ElevatedButton(
-                  onPressed: () {
+                PrimaryCommonButton(buttonName: "Get Started", onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const Auth()),
                     );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: MyColors.primaryColor,
-                    minimumSize: Size(MediaQuery.of(context).size.width, 44.h),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(11.r),
-                    ),
-                  ),
-                  child: "Get Selected"
-                      .text
-                      .size(16.sp)
-                      .fontWeight(FontWeight.w700)
-                      .color(Colors.white)
-                      .make(),
-                ),
+                  },),
+                  
                 61.h.heightBox,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
