@@ -1,6 +1,7 @@
 import 'package:e_comm/core/constants/my_assets.dart';
 import 'package:e_comm/core/constants/my_colors.dart';
 import 'package:e_comm/presentation/screens/home/home_view_model.dart';
+import 'package:e_comm/presentation/widgets/home_details.dart';
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -93,12 +94,21 @@ class _HomeState extends State<Home> {
               itemBuilder: (context, index) {
                 return Row(
                   children: [
-                    Image.asset(
-                      MyAssets.blogHead2,
-                      height: 120,
-                      width: 160,
-                      fit: BoxFit.cover,
-                    ).cornerRadius(20.r),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomeDetails()),
+                        );
+                      },
+                      child: Image.asset(
+                        MyAssets.blogHead2,
+                        height: 120,
+                        width: 160,
+                        fit: BoxFit.cover,
+                      ).cornerRadius(20.r),
+                    ),
                     10.w.widthBox,
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

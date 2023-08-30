@@ -12,11 +12,44 @@ class Categories extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: MyColors.primaryColor,
-        title: "Category".text.size(16.sp).bold.make().centered(),
+        automaticallyImplyLeading: false,
+        title: "Category".text.size(22.sp).bold.make().centered(),
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(FeatherIcons.plus))
         ],
       ),
+      body: ListView.separated(
+          itemCount: 10,
+          separatorBuilder: (context, index) => const SizedBox(height: 20),
+          itemBuilder: (context, index) {
+            return Card(
+              child: ListTile(
+                leading: "${index + 1}".text.size(16.sp).make(),
+                title: "enter".text.make(),
+                trailing: SizedBox(
+                  width: 100,
+                  child: Row(
+                    children: [
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          FeatherIcons.edit2,
+                          color: Colors.green,
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          FeatherIcons.trash,
+                          color: Colors.red,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            );
+          }),
     );
   }
 }

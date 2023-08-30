@@ -1,4 +1,4 @@
-import 'package:e_comm/core/themes/app_themes.dart';
+import 'package:e_comm/core/constants/my_colors.dart';
 import 'package:e_comm/presentation/screens/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,7 +21,13 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
-            theme: AppThemes.light,
+            theme: ThemeData(
+              primarySwatch: Colors.blue,
+              appBarTheme: const AppBarTheme(
+                iconTheme: IconThemeData(color: Colors.white),
+                color: MyColors.primaryColor, //<-- SEE HERE
+              ),
+            ),
             home: const Splash(),
           );
         });
