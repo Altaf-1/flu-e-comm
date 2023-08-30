@@ -2,6 +2,7 @@ import 'package:animation_wrappers/animations/faded_scale_animation.dart';
 import 'package:e_comm/core/constants/my_assets.dart';
 import 'package:e_comm/core/constants/my_colors.dart';
 import 'package:e_comm/presentation/screens/auth/register.dart';
+import 'package:e_comm/presentation/screens/general.dart';
 import 'package:e_comm/presentation/widgets/primary_Button.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -94,7 +95,15 @@ class _LoginState extends State<Login> {
                           ),
                           31.h.heightBox,
                           PrimaryCommonButton(
-                              buttonName: "Login", onPressed: () {}),
+                            buttonName: "Login",
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const General()),
+                              );
+                            },
+                          ),
                           31.h.heightBox,
                           "Don't have an Account"
                               .richText

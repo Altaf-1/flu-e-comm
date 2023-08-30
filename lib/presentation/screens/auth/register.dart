@@ -1,6 +1,7 @@
 import 'package:animation_wrappers/animation_wrappers.dart';
 import 'package:e_comm/core/constants/my_assets.dart';
 import 'package:e_comm/core/constants/my_colors.dart';
+import 'package:e_comm/presentation/screens/auth/login.dart';
 import 'package:e_comm/presentation/widgets/primary_button.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -18,9 +19,9 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyColors.primaryColor,
-      body: SingleChildScrollView(
-        child: SafeArea(
+        backgroundColor: MyColors.primaryColor,
+        body: SingleChildScrollView(
+          child: SafeArea(
             child: FadedScaleAnimation(
               child: Column(
                 children: [
@@ -96,20 +97,20 @@ class _RegisterState extends State<Register> {
                           ),
                           31.h.heightBox,
                           PrimaryCommonButton(
-                              buttonName: "Login", onPressed: () {}),
+                              buttonName: "Register", onPressed: () {}),
                           31.h.heightBox,
-                          "Don't have an Account"
+                          "Already Registered"
                               .richText
                               .size(18.sp)
                               .withTextSpanChildren([
                             TextSpan(
-                                text: "  Sign Up",
+                                text: "  Sign In",
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () => Navigator.push(
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const Register()),
+                                                const Login()),
                                       ),
                                 style: const TextStyle(
                                     fontWeight: FontWeight.w700,
@@ -125,7 +126,6 @@ class _RegisterState extends State<Register> {
               ),
             ),
           ),
-      )
-    );
+        ));
   }
 }
