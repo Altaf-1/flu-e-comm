@@ -9,4 +9,5 @@ class MyAssets {
   static const String blogHead2 = "assets/images/macbook.webp";
   static const String blogHead3 = "assets/images/watch.webp";
   static const String blogHead4 = "assets/images/whatsapp.webp";
+  static const String upload = "assets/images/upload.jpg";
 }

@@ -9,6 +9,12 @@ buildscript {
         classpath 'com.android.tools.build:gradle:7.3.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
+
+    android {                                                                                     │
+│   defaultConfig {                                                                             │
+│     minSdkVersion 19                                                                          │
+│   }                                                                                           │
+│ } 
 }
 
 allprojects {
@@ -19,13 +25,14 @@ allprojects {
 }
 
 rootProject.buildDir = '../build'
-subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
-    project.evaluationDependsOn(':app')
-}
+
 
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
+
+android {                                                                                     │
+│   defaultConfig {                                                                             │
+│     minSdkVersion 19                                                                          │
+│   }                                                                                           │
+│ } 
