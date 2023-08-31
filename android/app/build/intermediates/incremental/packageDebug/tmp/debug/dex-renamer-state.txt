@@ -1,0 +1,4 @@
+#Thu Aug 31 18:35:33 IST 2023
+base.0=D\:\\Flutter\\pro\\flu-e-comm\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

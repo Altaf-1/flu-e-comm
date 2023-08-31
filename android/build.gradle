@@ -10,11 +10,6 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 
-    android {                                                                                     │
-│   defaultConfig {                                                                             │
-│     minSdkVersion 19                                                                          │
-│   }                                                                                           │
-│ } 
 }
 
 allprojects {
@@ -31,8 +26,3 @@ tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
 
-android {                                                                                     │
-│   defaultConfig {                                                                             │
-│     minSdkVersion 19                                                                          │
-│   }                                                                                           │
-│ } 
